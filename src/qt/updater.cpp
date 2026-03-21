@@ -26,8 +26,10 @@
 // STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#if defined(_WIN32) && !defined(MONERO_GUI_STATIC)
-    #include <Winsock2.h>
+// Include winsock2.h before any other Windows headers to avoid conflicts
+#if defined(_WIN32)
+    #include <winsock2.h>
+    #include <ws2tcpip.h>
 #endif
 
 #include "updater.h"
@@ -41,9 +43,9 @@
 
 Updater::Updater()
 {
-    m_maintainers.emplace_back(fileGetContents(":/monero/utils/gpg_keys/binaryfate.asc").toStdString());
-    m_maintainers.emplace_back(fileGetContents(":/monero/utils/gpg_keys/fluffypony.asc").toStdString());
-    m_maintainers.emplace_back(fileGetContents(":/monero/utils/gpg_keys/luigi1111.asc").toStdString());
+    m_maintainers.emplace_back(fileGetContents(":/midas/utils/gpg_keys/binaryfate.asc").toStdString());
+    m_maintainers.emplace_back(fileGetContents(":/midas/utils/gpg_keys/fluffypony.asc").toStdString());
+    m_maintainers.emplace_back(fileGetContents(":/midas/utils/gpg_keys/luigi1111.asc").toStdString());
 }
 
 QByteArray Updater::fetchSignedHash(

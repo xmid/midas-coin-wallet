@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="eo">
 <context>
@@ -69,8 +69,8 @@
     </message>
     <message>
         <location filename="../pages/AddressBook.qml" line="93"/>
-        <source>This makes it easier to send or receive Monero and reduces errors when typing in addresses manually.</source>
-        <translation>Tio faciligas sendi aŭ ricevi MoneroN kaj reduktas erarojn dum tajpado de adresoj permane.</translation>
+        <source>This makes it easier to send or receive Midas and reduces errors when typing in addresses manually.</source>
+        <translation>Tio faciligas sendi aŭ ricevi MidasN kaj reduktas erarojn dum tajpado de adresoj permane.</translation>
     </message>
     <message>
         <location filename="../pages/AddressBook.qml" line="102"/>
@@ -634,13 +634,13 @@ Estas rekomendita, ke entajpi pasfrazon sur la aparata monujo por pli bona sekur
     </message>
     <message>
         <location filename="../pages/Keys.qml" line="62"/>
-        <source>WARNING: Do not reuse your Monero keys on another fork, UNLESS this fork has key reuse mitigations built in. Doing so will harm your privacy.</source>
-        <translation>ATENTU: Ne reuzu viajn Monero-ŝlosiloj je alia forko, KROM se tiu forko havas ŝlosilreuzkontraŭilojn. Malatenti tion povas damaĝi vian privatecon.</translation>
+        <source>WARNING: Do not reuse your Midas keys on another fork, UNLESS this fork has key reuse mitigations built in. Doing so will harm your privacy.</source>
+        <translation>ATENTU: Ne reuzu viajn Midas-ŝlosiloj je alia forko, KROM se tiu forko havas ŝlosilreuzkontraŭilojn. Malatenti tion povas damaĝi vian privatecon.</translation>
     </message>
     <message>
         <location filename="../pages/Keys.qml" line="85"/>
-        <source>WARNING: Copying your seed to clipboard can expose you to malicious software, which may record your seed and steal your Monero. Please write down your seed manually.</source>
-        <translation>ATENTU: Kopii vian semon en la poŝo malprotektas vin kontraŭ fiprogramoj, kiuj eble ŝtelos ĝin kaj viajn Monerojn. Bonvolu skribi vian semon sur papero.</translation>
+        <source>WARNING: Copying your seed to clipboard can expose you to malicious software, which may record your seed and steal your Midas. Please write down your seed manually.</source>
+        <translation>ATENTU: Kopii vian semon en la poŝo malprotektas vin kontraŭ fiprogramoj, kiuj eble ŝtelos ĝin kaj viajn Midasjn. Bonvolu skribi vian semon sur papero.</translation>
     </message>
     <message>
         <location filename="../pages/Keys.qml" line="106"/>
@@ -1065,9 +1065,9 @@ Estas rekomendita, ke entajpi pasfrazon sur la aparata monujo por pli bona sekur
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="76"/>
-        <source>Mining with your computer helps strengthen the Monero network. The more people mine, the harder it is for the network to be attacked, and every little bit helps.
+        <source>Mining with your computer helps strengthen the Midas network. The more people mine, the harder it is for the network to be attacked, and every little bit helps.
 
-Mining also gives you a small chance to earn some Monero. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
+Mining also gives you a small chance to earn some Midas. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1718,8 +1718,8 @@ Mining also gives you a small chance to earn some Monero. Your computer will cre
     </message>
     <message>
         <location filename="../pages/settings/SettingsInfo.qml" line="102"/>
-        <source>Embedded Monero version: </source>
-        <translation>Enkorpigita Monero-versio: </translation>
+        <source>Embedded Midas version: </source>
+        <translation>Enkorpigita Midas-versio: </translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsInfo.qml" line="132"/>
@@ -1828,12 +1828,12 @@ La malnova monuj-kaŝmemoro renomiĝos kaj restaŭreblos poste.
     </message>
     <message>
         <location filename="../pages/settings/SettingsInfo.qml" line="410"/>
-        <source>Donate to Monero</source>
-        <translation>Donacu al Monero</translation>
+        <source>Donate to Midas</source>
+        <translation>Donacu al Midas</translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsInfo.qml" line="412"/>
-        <source>Donation to Monero Core Team</source>
+        <source>Donation to Midas Core Team</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1917,7 +1917,7 @@ La malnova monuj-kaŝmemoro renomiĝos kaj restaŭreblos poste.
     <message>
         <location filename="../pages/settings/SettingsLayout.qml" line="168"/>
         <source>Enable displaying balance in other currencies</source>
-        <translation>Ebligu montri ekvilibron en aliaj moneroj</translation>
+        <translation>Ebligu montri ekvilibron en aliaj Midasj</translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsLayout.qml" line="189"/>
@@ -1927,7 +1927,7 @@ La malnova monuj-kaŝmemoro renomiĝos kaj restaŭreblos poste.
     <message>
         <location filename="../pages/settings/SettingsLayout.qml" line="204"/>
         <source>Currency</source>
-        <translation>Monero</translation>
+        <translation>Midas</translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsLayout.qml" line="228"/>
@@ -2012,13 +2012,13 @@ La malnova monuj-kaŝmemoro renomiĝos kaj restaŭreblos poste.
     </message>
     <message>
         <location filename="../pages/settings/SettingsNode.qml" line="224"/>
-        <source>Uses a third-party server to connect to the Monero network. Less secure, but easier on your computer.</source>
-        <translation>Uzas triulan servilon por konektiĝi kun la Monero-reto. Malpli sekura, sed malpli streĉa por via komputilo.</translation>
+        <source>Uses a third-party server to connect to the Midas network. Less secure, but easier on your computer.</source>
+        <translation>Uzas triulan servilon por konektiĝi kun la Midas-reto. Malpli sekura, sed malpli streĉa por via komputilo.</translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsNode.qml" line="253"/>
-        <source>To find a remote node, type &apos;Monero remote node&apos; into your favorite search engine. Please ensure the node is run by a trusted third-party.</source>
-        <translation>Por trovi foran nodon, tajpu &apos;Monero remote node&apos; en vian plej ŝatatan serĉilon. Bonvolu certiĝi ke fidata triulo funkciigas la nodon.</translation>
+        <source>To find a remote node, type &apos;Midas remote node&apos; into your favorite search engine. Please ensure the node is run by a trusted third-party.</source>
+        <translation>Por trovi foran nodon, tajpu &apos;Midas remote node&apos; en vian plej ŝatatan serĉilon. Bonvolu certiĝi ke fidata triulo funkciigas la nodon.</translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsNode.qml" line="317"/>
@@ -2202,7 +2202,7 @@ Vi povas ŝanĝi la pasvorton laŭ la monujo.</translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsWallet.qml" line="177"/>
-        <source>Receive Monero for your business, easily.</source>
+        <source>Receive Midas for your business, easily.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2230,8 +2230,8 @@ Vi povas ŝanĝi la pasvorton laŭ la monujo.</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="103"/>
-        <source>This page allows you to interact with the shared ring database. This database is meant for use by Monero wallets as well as wallets from Monero clones which reuse the Monero keys.</source>
-        <translation>Ĉi tiu paĝo ebligas vin interagi kun la komuna ringdatumbazo. Tiu datumbazo uziĝos de Monero-monujoj kaj de monujoj el Monero-klonoj kiuj reuzas la Monero-ŝlosilojn.</translation>
+        <source>This page allows you to interact with the shared ring database. This database is meant for use by Midas wallets as well as wallets from Midas clones which reuse the Midas keys.</source>
+        <translation>Ĉi tiu paĝo ebligas vin interagi kun la komuna ringdatumbazo. Tiu datumbazo uziĝos de Midas-monujoj kaj de monujoj el Midas-klonoj kiuj reuzas la Midas-ŝlosilojn.</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="115"/>
@@ -2290,8 +2290,8 @@ Vi povas ŝanĝi la pasvorton laŭ la monujo.</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="116"/>
-        <source>In order to obscure which inputs in a Monero transaction are being spent, a third party should not be able to tell which inputs in a ring are already known to be spent. Being able to do so would weaken the protection afforded by ring signatures. If all but one of the inputs are known to be already spent, then the input being actually spent becomes apparent, thereby nullifying the effect of ring signatures, one of the three main layers of privacy protection Monero uses.&lt;br&gt;To help transactions avoid those inputs, a list of known spent ones can be used to avoid using them in new transactions. Such a list is maintained by the Monero project and is available on the getmonero.org website, and you can import this list here.&lt;br&gt;Alternatively, you can scan the blockchain (and the blockchain of key-reusing Monero clones) yourself using the monero-blockchain-mark-spent-outputs tool to create a list of known spent outputs.&lt;br&gt;</source>
-        <translation>Ĉar ni celas kaŝi kiujn enigojn de Monera transakcio elspeziĝas, neniu tria persono devas kapabli kompreni kiuj enigoj en ringo laŭscie jam elspeziĝis. Tiu kapablo malfortigus la ŝirmefikon de ringsubskriboj. Se iu ekscias ke ĉiuj enigoj, escepte de unu, jam elspeziĝis, tiam la enigo kiu fakte elspeziĝas aperas tuj. Tio nuligus la efekton de ringsubskriboj, unu el la tri plej gravaj privatecŝirmiloj uzitaj en Monero.&lt;br&gt;Ekzistas listo de laŭscie elspezitaj enigoj, kiu permesas malhelpi ilian uzadon en transakcioj. Tiun liston bontenas la Monero-projekto, kaj disponeblas ĉe la retejo getmonero.org, vi povas importi ĝin ĉi tien.&lt;br&gt;Alternative, vi povas mem skani la blokĉenon (kaj la blokĉenon de ŝlosilreuzanta Monero-klonoj) uzante la Monerblokĉen-malakceptilon por krei liston de laŭscie elspezitaj eligoj.&lt;br&gt;</translation>
+        <source>In order to obscure which inputs in a Midas transaction are being spent, a third party should not be able to tell which inputs in a ring are already known to be spent. Being able to do so would weaken the protection afforded by ring signatures. If all but one of the inputs are known to be already spent, then the input being actually spent becomes apparent, thereby nullifying the effect of ring signatures, one of the three main layers of privacy protection Midas uses.&lt;br&gt;To help transactions avoid those inputs, a list of known spent ones can be used to avoid using them in new transactions. Such a list is maintained by the Midas project and is available on the getMidas.org website, and you can import this list here.&lt;br&gt;Alternatively, you can scan the blockchain (and the blockchain of key-reusing Midas clones) yourself using the Midas-blockchain-mark-spent-outputs tool to create a list of known spent outputs.&lt;br&gt;</source>
+        <translation>Ĉar ni celas kaŝi kiujn enigojn de Monera transakcio elspeziĝas, neniu tria persono devas kapabli kompreni kiuj enigoj en ringo laŭscie jam elspeziĝis. Tiu kapablo malfortigus la ŝirmefikon de ringsubskriboj. Se iu ekscias ke ĉiuj enigoj, escepte de unu, jam elspeziĝis, tiam la enigo kiu fakte elspeziĝas aperas tuj. Tio nuligus la efekton de ringsubskriboj, unu el la tri plej gravaj privatecŝirmiloj uzitaj en Midas.&lt;br&gt;Ekzistas listo de laŭscie elspezitaj enigoj, kiu permesas malhelpi ilian uzadon en transakcioj. Tiun liston bontenas la Midas-projekto, kaj disponeblas ĉe la retejo getMidas.org, vi povas importi ĝin ĉi tien.&lt;br&gt;Alternative, vi povas mem skani la blokĉenon (kaj la blokĉenon de ŝlosilreuzanta Midas-klonoj) uzante la Monerblokĉen-malakceptilon por krei liston de laŭscie elspezitaj eligoj.&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="134"/>
@@ -2310,13 +2310,13 @@ Vi povas ŝanĝi la pasvorton laŭ la monujo.</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="247"/>
-        <source>In order to avoid nullifying the protection afforded by Monero&apos;s ring signatures, an output should not be spent with different rings on different blockchains. While this is normally not a concern, it can become one when a key-reusing Monero clone allows you to spend existing outputs. In this case, you need to ensure this existing outputs uses the same ring on both chains.&lt;br&gt;This will be done automatically by Monero and any key-reusing software which is not trying to actively strip you of your privacy.&lt;br&gt;If you are using a key-reusing Monero clone too, and this clone does not include this protection, you can still ensure your transactions are protected by spending on the clone first, then manually adding the ring on this page, which allows you to then spend your Monero safely.&lt;br&gt;If you do not use a key-reusing Monero clone without these safety features, then you do not need to do anything as it is all automated.&lt;br&gt;</source>
-        <translation>Ĉar ni volas eviti la nuliĝon de la ŝirmefiko de la Moneraj ringsubskriboj, oni evitu elspezon de unu eligo per diversaj ringoj sur diversaj blokĉenoj. Dum tio normale ne gravas, povas fariĝi problemo kiam ŝlosilreuzanta Monero-klono ebligas vin elspezi ekzistantajn eligojn. Tiukaze vi devas prizorgi ke la ekzistantaj eligoj uzas la saman ringoj sur ambaŭ blokĉenoj.&lt;br&gt; Tion plenumos aŭtomate Monero kaj ĉiu ŝlosilreuzanta programo kiu ne aktive provas depreni vian privatecon.&lt;br&gt;Se vi uzas ankaŭ ŝlosilreuzantan Monero-klonon, kaj se tiu klono ne inkluzivas tiun ŝirmon, vi tamen povas ŝirmi viajn transakciojn. Elspezu unue per la klono, kaj poste aldonu la ringon al tiu paĝo, kiu ebligos sekuran elspezon de via Monero.&lt;br&gt;Se vi ne uzas ŝlosilreuzantan Monero-klonon, kiu ne enhavas tiujn sekuraĵojn, vi tiam ne bezonas fari ion ajn, ĉio aŭtomatas.&lt;br&gt;</translation>
+        <source>In order to avoid nullifying the protection afforded by Midas&apos;s ring signatures, an output should not be spent with different rings on different blockchains. While this is normally not a concern, it can become one when a key-reusing Midas clone allows you to spend existing outputs. In this case, you need to ensure this existing outputs uses the same ring on both chains.&lt;br&gt;This will be done automatically by Midas and any key-reusing software which is not trying to actively strip you of your privacy.&lt;br&gt;If you are using a key-reusing Midas clone too, and this clone does not include this protection, you can still ensure your transactions are protected by spending on the clone first, then manually adding the ring on this page, which allows you to then spend your Midas safely.&lt;br&gt;If you do not use a key-reusing Midas clone without these safety features, then you do not need to do anything as it is all automated.&lt;br&gt;</source>
+        <translation>Ĉar ni volas eviti la nuliĝon de la ŝirmefiko de la Moneraj ringsubskriboj, oni evitu elspezon de unu eligo per diversaj ringoj sur diversaj blokĉenoj. Dum tio normale ne gravas, povas fariĝi problemo kiam ŝlosilreuzanta Midas-klono ebligas vin elspezi ekzistantajn eligojn. Tiukaze vi devas prizorgi ke la ekzistantaj eligoj uzas la saman ringoj sur ambaŭ blokĉenoj.&lt;br&gt; Tion plenumos aŭtomate Midas kaj ĉiu ŝlosilreuzanta programo kiu ne aktive provas depreni vian privatecon.&lt;br&gt;Se vi uzas ankaŭ ŝlosilreuzantan Midas-klonon, kaj se tiu klono ne inkluzivas tiun ŝirmon, vi tamen povas ŝirmi viajn transakciojn. Elspezu unue per la klono, kaj poste aldonu la ringon al tiu paĝo, kiu ebligos sekuran elspezon de via Midas.&lt;br&gt;Se vi ne uzas ŝlosilreuzantan Midas-klonon, kiu ne enhavas tiujn sekuraĵojn, vi tiam ne bezonas fari ion ajn, ĉio aŭtomatas.&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="266"/>
-        <source>This records rings used by outputs spent on Monero on a key reusing chain, so that the same ring may be reused to avoid privacy issues.</source>
-        <translation>Tio registras la ringojn kiuj uziĝis por elspezi Moneron sur ŝlosilreuzanta ĉeno, tiel ke la sama ringo uziĝu denove, por malhelpi privatecproblemojn.</translation>
+        <source>This records rings used by outputs spent on Midas on a key reusing chain, so that the same ring may be reused to avoid privacy issues.</source>
+        <translation>Tio registras la ringojn kiuj uziĝis por elspezi Midasn sur ŝlosilreuzanta ĉeno, tiel ke la sama ringo uziĝu denove, por malhelpi privatecproblemojn.</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="277"/>
@@ -2500,8 +2500,8 @@ Vi povas ŝanĝi la pasvorton laŭ la monujo.</translation>
     </message>
     <message>
         <location filename="../pages/Sign.qml" line="341"/>
-        <source>Enter the Monero Address (example: 44AFFq5kSiGBoZ...)</source>
-        <translation>Entajpu la Monero-adreson (ekz. 44AFFq5kSiGBoZ...)</translation>
+        <source>Enter the Midas Address (example: 44AFFq5kSiGBoZ...)</source>
+        <translation>Entajpu la Midas-adreson (ekz. 44AFFq5kSiGBoZ...)</translation>
     </message>
     <message>
         <location filename="../pages/Sign.qml" line="351"/>
@@ -2784,8 +2784,8 @@ Vi povas ŝanĝi la pasvorton laŭ la monujo.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="1071"/>
-        <source>Monero sent successfully</source>
-        <translation>Sukcese sendis Moneron</translation>
+        <source>Midas sent successfully</source>
+        <translation>Sukcese sendis Midasn</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="1199"/>
@@ -3108,7 +3108,7 @@ Bonvolu plibonigi aŭ konekti al alia demono</translation>
     </message>
     <message>
         <location filename="../components/TxConfirmationDialog.qml" line="311"/>
-        <source>Monero address</source>
+        <source>Midas address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3261,12 +3261,12 @@ Kaze de Elspezpruvo, vi ne bezonas precizi la ricevantan adreson.</translation>
     <name>UpdateDialog</name>
     <message>
         <location filename="../components/UpdateDialog.qml" line="77"/>
-        <source>New Monero version v%1 is available.</source>
+        <source>New Midas version v%1 is available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../components/UpdateDialog.qml" line="98"/>
-        <source>Please visit getmonero.org for details</source>
+        <source>Please visit getMidas.org for details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3640,8 +3640,8 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardCreateWallet3.qml" line="60"/>
-        <source>To be able to communicate with the Monero network your wallet needs to be connected to a Monero node. For best privacy it&apos;s recommended to run your own node.</source>
-        <translation>Por komuniki kun la Monero-reto, via monuj devas esti konektita kun Monero-nodo. Por plej bona privateco, oni konsilas funkciigi vian propran nodon.</translation>
+        <source>To be able to communicate with the Midas network your wallet needs to be connected to a Midas node. For best privacy it&apos;s recommended to run your own node.</source>
+        <translation>Por komuniki kun la Midas-reto, via monuj devas esti konektita kun Midas-nodo. Por plej bona privateco, oni konsilas funkciigi vian propran nodon.</translation>
     </message>
 </context>
 <context>
@@ -3701,8 +3701,8 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardDaemonSettings.qml" line="152"/>
-        <source>Additionally, you may specify a bootstrap node to use Monero immediately.</source>
-        <translation>Vi aldone povas precizigi eknodon por uzi Moneron tuj.</translation>
+        <source>Additionally, you may specify a bootstrap node to use Midas immediately.</source>
+        <translation>Vi aldone povas precizigi eknodon por uzi Midasn tuj.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDaemonSettings.qml" line="192"/>
@@ -3714,7 +3714,7 @@ your input may be required.</source>
     <name>WizardHome</name>
     <message>
         <location filename="../wizard/WizardHome.qml" line="66"/>
-        <source>Welcome to Monero</source>
+        <source>Welcome to Midas</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3736,8 +3736,8 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardHome.qml" line="82"/>
-        <source>Choose this option if this is your first time using Monero.</source>
-        <translation>Elektu tiun opcion se vi uzas Moneron unuafoje.</translation>
+        <source>Choose this option if this is your first time using Midas.</source>
+        <translation>Elektu tiun opcion se vi uzas Midasn unuafoje.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardHome.qml" line="104"/>
@@ -3746,8 +3746,8 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardHome.qml" line="108"/>
-        <source>Connect your hardware wallet to create a new Monero wallet.</source>
-        <translation>Konektu vian aparat-monujon por krei novan Monero-monujon.</translation>
+        <source>Connect your hardware wallet to create a new Midas wallet.</source>
+        <translation>Konektu vian aparat-monujon por krei novan Midas-monujon.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardHome.qml" line="127"/>
@@ -3812,7 +3812,7 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardModeBootstrap.qml" line="84"/>
-        <source>Temporary use of remote nodes is useful in order to use Monero immediately (hence the name bootstrap), however be aware that when using remote nodes (including with the bootstrap setting), nodes could track your IP address, track your &quot;restore height&quot; and associated block request data, and send you inaccurate information to learn more about transactions you make.</source>
+        <source>Temporary use of remote nodes is useful in order to use Midas immediately (hence the name bootstrap), however be aware that when using remote nodes (including with the bootstrap setting), nodes could track your IP address, track your &quot;restore height&quot; and associated block request data, and send you inaccurate information to learn more about transactions you make.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3835,8 +3835,8 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardModeRemoteNodeWarning.qml" line="72"/>
-        <source>This mode is ideal for managing small amounts of Monero. You have access to basic features for making and managing transactions. It will automatically connect to the Monero network so you can start using Monero immediately.</source>
-        <translation>Tiu moduso plej taŭgas por trakti malgrandajn sumojn de Monero. Vi povas uzi bazajn ilojn por krei kaj pritrakti transakciojn. La simpla moduso aŭtomate konektiĝas kun la Monero-reto, tiel ke vi povas uzi Moneron tuj.</translation>
+        <source>This mode is ideal for managing small amounts of Midas. You have access to basic features for making and managing transactions. It will automatically connect to the Midas network so you can start using Midas immediately.</source>
+        <translation>Tiu moduso plej taŭgas por trakti malgrandajn sumojn de Midas. Vi povas uzi bazajn ilojn por krei kaj pritrakti transakciojn. La simpla moduso aŭtomate konektiĝas kun la Midas-reto, tiel ke vi povas uzi Midasn tuj.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardModeRemoteNodeWarning.qml" line="85"/>
@@ -3926,7 +3926,7 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardModeSelection.qml" line="166"/>
-        <source>Create portable wallets and use them on any PC. Enable if you installed Monero on a USB stick, an external drive, or any other portable storage medium.</source>
+        <source>Create portable wallets and use them on any PC. Enable if you installed Midas on a USB stick, an external drive, or any other portable storage medium.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4098,10 +4098,10 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardRestoreWallet3.qml" line="63"/>
-        <source>To be able to communicate with the Monero network your wallet needs to be connected to a Monero node. For best privacy it&apos;s recommended to run your own node.
+        <source>To be able to communicate with the Midas network your wallet needs to be connected to a Midas node. For best privacy it&apos;s recommended to run your own node.
 
 If you don&apos;t have the option to run your own node, there&apos;s an option to connect to a remote node.</source>
-        <translation>Por komuniki kun la Monero-reto, via monujo estu konektita kun Monera nodo. Por plej bona privateco, oni konsilas funkciigi sian propran nodon.
+        <translation>Por komuniki kun la Midas-reto, via monujo estu konektita kun Monera nodo. Por plej bona privateco, oni konsilas funkciigi sian propran nodon.
 
 Se vi ne havas eblecon funkciigi vian propra nodon, estas opcio konektiĝi kun fora nodo.</translation>
     </message>
@@ -4252,8 +4252,8 @@ Se vi ne havas eblecon funkciigi vian propra nodon, estas opcio konektiĝi kun f
     </message>
     <message>
         <location filename="../main.qml" line="1052"/>
-        <source>This address received %1 monero, but the transaction is not yet mined</source>
-        <translation>Tiu ĉi adreso ricevis %1 moneron; sed la transakcio ankoraŭ ne estas minata</translation>
+        <source>This address received %1 Midas, but the transaction is not yet mined</source>
+        <translation>Tiu ĉi adreso ricevis %1 Midasn; sed la transakcio ankoraŭ ne estas minata</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1059"/>
@@ -4342,7 +4342,7 @@ Se vi ne havas eblecon funkciigi vian propra nodon, estas opcio konektiĝi kun f
     </message>
     <message>
         <location filename="../main.qml" line="1345"/>
-        <source>Would you like to register Monero GUI Desktop entry?</source>
+        <source>Would you like to register Midas GUI Desktop entry?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4501,8 +4501,8 @@ Se vi ne havas eblecon funkciigi vian propra nodon, estas opcio konektiĝi kun f
     </message>
     <message>
         <location filename="../main.qml" line="1055"/>
-        <source>This address received %1 monero, with %2 confirmation(s).</source>
-        <translation>Tiu adreso ricevis %1 monerojn, kun %2 konfirmo(j)</translation>
+        <source>This address received %1 Midas, with %2 confirmation(s).</source>
+        <translation>Tiu adreso ricevis %1 Midasjn, kun %2 konfirmo(j)</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1742"/>

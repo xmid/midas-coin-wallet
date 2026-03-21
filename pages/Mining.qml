@@ -30,10 +30,10 @@ import QtQml.Models 2.2
 import QtQuick 2.9
 import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.2
-import "../components" as MoneroComponents
-import moneroComponents.Wallet 1.0
-import moneroComponents.P2PoolManager 1.0
-import moneroComponents.DaemonManager 1.0
+import "../components" as MidasComponents
+import midasComponents.Wallet 1.0
+import midasComponents.P2PoolManager 1.0
+import midasComponents.DaemonManager 1.0
 
 Rectangle {
     id: root
@@ -53,36 +53,36 @@ Rectangle {
         anchors.right: parent.right
         spacing: 20
 
-        MoneroComponents.Label {
+        MidasComponents.Label {
             id: soloTitleLabel
             fontSize: 24
             text: qsTr("Mining") + translationManager.emptyString
         }
 
-        MoneroComponents.WarningBox {
+        MidasComponents.WarningBox {
             Layout.bottomMargin: 8
             id: localDaemonWarning
             text: qsTr("Mining is only available on local daemons.") + translationManager.emptyString
             visible: persistentSettings.useRemoteNode && !persistentSettings.allowRemoteNodeMining
         }
 
-        MoneroComponents.WarningBox {
+        MidasComponents.WarningBox {
             Layout.bottomMargin: 8
             text: qsTr("Your daemon must be synchronized before you can start mining") + translationManager.emptyString
             visible: !persistentSettings.useRemoteNode && !appWindow.daemonSynced
         }
 
-        MoneroComponents.TextPlain {
+        MidasComponents.TextPlain {
             id: soloMainLabel
-            text: qsTr("Mining with your computer helps strengthen the Monero network. The more people mine, the harder it is for the network to be attacked, and every little bit helps.\n\nMining also gives you a small chance to earn some Monero. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!") + "\n\n" + qsTr("P2Pool mining is a decentralized way to pool mine that pays out more frequently compared to solo mining, while also supporting the network.") + translationManager.emptyString
+            text: qsTr("Mining with your computer helps strengthen the Midas network. The more people mine, the harder it is for the network to be attacked, and every little bit helps.\n\nMining also gives you a small chance to earn some Midas. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!") + "\n\n" + qsTr("P2Pool mining is a decentralized way to pool mine that pays out more frequently compared to solo mining, while also supporting the network.") + translationManager.emptyString
             wrapMode: Text.Wrap
             Layout.fillWidth: true
-            font.family: MoneroComponents.Style.fontRegular.name
+            font.family: MidasComponents.Style.fontRegular.name
             font.pixelSize: 14
-            color: MoneroComponents.Style.defaultFontColor
+            color: MidasComponents.Style.defaultFontColor
         }
 
-        MoneroComponents.WarningBox {
+        MidasComponents.WarningBox {
             id: warningLabel
             Layout.topMargin: 8
             Layout.bottomMargin: 8
@@ -106,9 +106,9 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.alignment : Qt.AlignTop | Qt.AlignLeft
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     id: miningModeLabel
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: MidasComponents.Style.defaultFontColor
                     text: qsTr("Mining mode") + translationManager.emptyString
                     fontSize: 16
                 }
@@ -118,7 +118,7 @@ Rectangle {
                 Layout.topMargin: 5
                 spacing: 10
 
-                MoneroComponents.StandardDropdown {
+                MidasComponents.StandardDropdown {
                     Layout.maximumWidth: 200
                     id: miningModeDropdown
                     visible: true
@@ -137,9 +137,9 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.alignment : Qt.AlignTop | Qt.AlignLeft
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     id: soloMinerThreadsLabel
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: MidasComponents.Style.defaultFontColor
                     text: qsTr("CPU threads") + translationManager.emptyString
                     fontSize: 16
                     wrapMode: Text.WordWrap
@@ -151,7 +151,7 @@ Rectangle {
                 spacing: 16
 
                 RowLayout {
-                    MoneroComponents.StandardButton {
+                    MidasComponents.StandardButton {
                         id: removeThreadButton
                         small: true
                         primary: false
@@ -160,10 +160,10 @@ Rectangle {
                         onClicked: threads--
                     }
 
-                    MoneroComponents.TextPlain {
+                    MidasComponents.TextPlain {
                         Layout.bottomMargin: 1
                         Layout.minimumWidth: 45
-                        color: MoneroComponents.Style.defaultFontColor
+                        color: MidasComponents.Style.defaultFontColor
                         text: threads
                         horizontalAlignment: Text.AlignHCenter
                         font.pixelSize: 16
@@ -181,7 +181,7 @@ Rectangle {
                         }
                     }
 
-                    MoneroComponents.StandardButton {
+                    MidasComponents.StandardButton {
                         id: addThreadButton
                         small: true
                         primary: false
@@ -192,7 +192,7 @@ Rectangle {
                 }
 
                 RowLayout {
-                    MoneroComponents.StandardButton {
+                    MidasComponents.StandardButton {
                         id: autoRecommendedThreadsButton
                         small: true
                         primary: false
@@ -204,7 +204,7 @@ Rectangle {
                         }
                     }
 
-                    MoneroComponents.StandardButton {
+                    MidasComponents.StandardButton {
                         id: autoSetMaxThreadsButton
                         small: true
                         primary: false
@@ -220,7 +220,7 @@ Rectangle {
                 RowLayout {
                     // Disable this option until stable
                     visible: false
-                    MoneroComponents.CheckBox {
+                    MidasComponents.CheckBox {
                         id: ignoreBattery
                         enabled: startSoloMinerButton.enabled
                         checked: !persistentSettings.miningIgnoreBattery
@@ -234,9 +234,9 @@ Rectangle {
                 Layout.alignment: Qt.AlignTop | Qt.AlignLeft
                 Layout.minimumWidth: 140
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     id: optionsLabel
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: MidasComponents.Style.defaultFontColor
                     visible: !persistentSettings.allow_p2pool_mining
                     text: qsTr("Options") + translationManager.emptyString
                     fontSize: 16
@@ -250,7 +250,7 @@ Rectangle {
                 spacing: 16
 
                 RowLayout {
-                    MoneroComponents.CheckBox {
+                    MidasComponents.CheckBox {
                         id: backgroundMining
                         visible: !persistentSettings.allow_p2pool_mining
                         enabled: startSoloMinerButton.enabled && !persistentSettings.allow_p2pool_mining
@@ -264,9 +264,9 @@ Rectangle {
             ColumnLayout {
                 Layout.alignment : Qt.AlignTop | Qt.AlignLeft
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     id: manageSoloMinerLabel
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: MidasComponents.Style.defaultFontColor
                     text: qsTr("Manage miner") + translationManager.emptyString
                     fontSize: 16
                     wrapMode: Text.Wrap
@@ -279,7 +279,7 @@ Rectangle {
                 spacing: 16
 
                 RowLayout {
-                    MoneroComponents.StandardButton {
+                    MidasComponents.StandardButton {
                         visible: true
                         id: startSoloMinerButton
                         small: true
@@ -295,7 +295,7 @@ Rectangle {
                                 if (persistentSettings.allow_p2pool_mining) {
                                     if (p2poolManager.isInstalled()) {
                                         args = daemonManager.getArgs(persistentSettings.blockchainDataDir) //updates arguments
-                                        if (persistentSettings.allowRemoteNodeMining || (args.includes("--zmq-pub tcp://127.0.0.1:18083") || args.includes("--zmq-pub=tcp://127.0.0.1:18083")) && !args.includes("--no-zmq")) {
+                                        if (persistentSettings.allowRemoteNodeMining || (args.includes("--zmq-pub tcp://127.0.0.1:19082") || args.includes("--zmq-pub=tcp://127.0.0.1:19082")) && !args.includes("--no-zmq")) {
                                             startP2Pool()
                                         }
                                         else {
@@ -337,7 +337,7 @@ Rectangle {
                         }
                     }
 
-                    MoneroComponents.StandardButton {
+                    MidasComponents.StandardButton {
                         visible: true
                         id: stopSoloMinerButton
                         small: true
@@ -356,9 +356,9 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.alignment : Qt.AlignTop | Qt.AlignLeft
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     id: statusLabel
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: MidasComponents.Style.defaultFontColor
                     text: qsTr("Status") + translationManager.emptyString
                     fontSize: 16
                 }
@@ -368,7 +368,7 @@ Rectangle {
                 Layout.fillWidth: true
                 spacing: 16
 
-                MoneroComponents.LineEditMulti {
+                MidasComponents.LineEditMulti {
                     id: statusText
                     Layout.minimumWidth: 300
                     text: qsTr("Not mining") + translationManager.emptyString
@@ -391,15 +391,15 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.alignment : Qt.AlignTop | Qt.AlignLeft
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     id: chainLabel
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: MidasComponents.Style.defaultFontColor
                     visible: persistentSettings.allow_p2pool_mining
                     text: qsTr("Chain") + translationManager.emptyString
                     fontSize: 16
                 }
 
-                MoneroComponents.Tooltip {
+                MidasComponents.Tooltip {
                     id: chainsHelpTooltip
                     text: qsTr("Use the mini or nano chains if you have a low hashrate.") + translationManager.emptyString
                 }
@@ -423,7 +423,7 @@ Rectangle {
                 Layout.topMargin: 5
                 spacing: 10
 
-                MoneroComponents.StandardDropdown {
+                MidasComponents.StandardDropdown {
                     Layout.maximumWidth: 200
                     id: chainDropdown
                     visible: persistentSettings.allow_p2pool_mining
@@ -437,22 +437,22 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.alignment : Qt.AlignTop | Qt.AlignLeft
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     id: flagsLabel
                     visible: persistentSettings.allow_p2pool_mining
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: MidasComponents.Style.defaultFontColor
                     text: qsTr("Flags") + translationManager.emptyString
                     fontSize: 16
                 }
 
-                MoneroComponents.Tooltip {
+                MidasComponents.Tooltip {
                     id: flagsHelpTooltip
                     text: "
                     Usage:<br>
                         --wallet              Wallet address to mine to. Subaddresses and integrated addresses are not supported!<br>
-                        --host                IP address of your Monero node, default is 127.0.0.1<br>
-                        --rpc-port            monerod RPC API port number, default is 18081<br>
-                        --zmq-port            monerod ZMQ pub port number, default is 18083 (same port as in monerod\'s \"--zmq-pub\" command line parameter)<br>
+                        --host                IP address of your Midas node, default is 127.0.0.1<br>
+                        --rpc-port            midasd RPC API port number, default is 19081<br>
+                        --zmq-port            midasd ZMQ pub port number, default is 19082 (same port as in midasd\'s \"--zmq-pub\" command line parameter)<br>
                         --stratum             Comma-separated list of IP:port for stratum server to listen on<br>
                         --p2p                 Comma-separated list of IP:port for p2p server to listen on<br>
                         --addpeers            Comma-separated list of IP:port of other p2pool nodes to connect to<br>
@@ -466,12 +466,12 @@ Rectangle {
                         --stratum-api         An alias for --local-api<br>
                         --no-cache            Disable p2pool.cache<br>
                         --no-color            Disable colors in console output<br>
-                        --no-randomx          Disable internal RandomX hasher: p2pool will use RPC calls to monerod to check PoW hashes<br>
+                        --no-randomx          Disable internal RandomX hasher: p2pool will use RPC calls to midasd to check PoW hashes<br>
                         --out-peers N         Maximum number of outgoing connections for p2p server (any value between 10 and 1000)<br>
                         --in-peers N          Maximum number of incoming connections for p2p server (any value between 10 and 1000)<br>
                         --start-mining N      Start built-in miner using N threads (any value between 1 and 64)<br>
                         --no-autodiff         Disable automatic difficulty adjustment for miners connected to stratum (WARNING: incompatible with Nicehash and MRR)<br>
-                        --rpc-login           Specify username[:password] required for Monero RPC server<br>
+                        --rpc-login           Specify username[:password] required for Midas RPC server<br>
                         --socks5              Specify IP:port of a SOCKS5 proxy to use for outgoing connections<br>
                         --no-dns              Disable DNS queries, use only IP addresses to connect to peers (seed node DNS will be unavailable too)<br>
                         --p2p-external-port   Port number that your router uses for mapping to your local p2p port. Use it if you are behind a NAT and still want to accept incoming connections<br>
@@ -482,8 +482,8 @@ Rectangle {
                         --version             Print p2pool's version and build details<br>
                         --tls-cert file       Load TLS certificate chain from \"file\" in the PEM format<br>
                         --tls-cert-key file   Load TLS certificate private key from \"file\" in the PEM format<br>
-                        --rpc-ssl             Enable SSL on RPC connections to the Monero node<br>
-                        --rpc-ssl-fingerprint base64-encoded fingerprint of the Monero node's certificate (optional, use it for certificate pinning)<br>
+                        --rpc-ssl             Enable SSL on RPC connections to the Midas node<br>
+                        --rpc-ssl-fingerprint base64-encoded fingerprint of the Midas node's certificate (optional, use it for certificate pinning)<br>
                         --no-stratum-http     Disable HTTP on Stratum ports<br>
                         --help                Show this help message
                     "
@@ -506,7 +506,7 @@ Rectangle {
 
             ColumnLayout {
                 Layout.fillWidth: true
-                MoneroComponents.LineEditMulti {
+                MidasComponents.LineEditMulti {
                     id: p2poolFlags
                     Layout.minimumWidth: 100
                     Layout.bottomMargin: 20
@@ -590,7 +590,7 @@ Rectangle {
         errorPopup.open()
     }
 
-    MoneroComponents.StandardDialog {
+    MidasComponents.StandardDialog {
         id: errorPopup
         cancelVisible: false
     }
@@ -607,11 +607,11 @@ Rectangle {
         var noSync = false;
         //these args will be deleted because DaemonManager::start will re-add them later.
         //--no-zmq must be deleted. removing '--zmq-pub=tcp...' lets us blindly add '--zmq-pub tcp...' later without risking duplication.
-        var defaultArgs = ["--detach","--data-dir","--bootstrap-daemon-address","--prune-blockchain","--no-sync","--check-updates","--non-interactive","--max-concurrency","--no-zmq","--zmq-pub=tcp://127.0.0.1:18083"]
+        var defaultArgs = ["--detach","--data-dir","--bootstrap-daemon-address","--prune-blockchain","--no-sync","--check-updates","--non-interactive","--max-concurrency","--no-zmq","--zmq-pub=tcp://127.0.0.1:19082"]
         var customDaemonArgsArray = args.split(' ');
         var flag = "";
         var allArgs = [];
-        var p2poolArgs = ["--zmq-pub tcp://127.0.0.1:18083"];
+        var p2poolArgs = ["--zmq-pub tcp://127.0.0.1:19082"];
         //create an array (allArgs) of ['--arg value','--arg2','--arg3']
         for (let i = 0; i < customDaemonArgsArray.length; i++) {
             if(!customDaemonArgsArray[i].startsWith("--")) {

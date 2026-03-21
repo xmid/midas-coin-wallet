@@ -28,8 +28,8 @@
 
 import QtQuick 2.9
 
-import "../components" as MoneroComponents
-import "../components/effects/" as MoneroEffects
+import "../components" as MidasComponents
+import "../components/effects/" as MidasEffects
 
 Label {
     id: item
@@ -42,12 +42,12 @@ Label {
         anchors.left: parent.left
         anchors.right: parent.right
         height: 2
-        color: MoneroComponents.Style.appWindowBorderColor
+        color: MidasComponents.Style.appWindowBorderColor
 
-        MoneroEffects.ColorTransition {
+        MidasEffects.ColorTransition {
             targetObj: parent
-            blackColor: MoneroComponents.Style._b_appWindowBorderColor
-            whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+            blackColor: MidasComponents.Style._b_appWindowBorderColor
+            whiteColor: MidasComponents.Style._w_appWindowBorderColor
         }
     }
 }

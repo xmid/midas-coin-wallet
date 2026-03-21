@@ -32,7 +32,7 @@ import QtQuick.Controls 2.0
 
 import "../js/Wizard.js" as Wizard
 import "../js/Utils.js" as Utils
-import "../components" as MoneroComponents
+import "../components" as MidasComponents
 
 Rectangle {
     id: wizardRestoreWallet1
@@ -114,7 +114,7 @@ Rectangle {
                 spacing: 30
                 Layout.fillWidth: true
 
-                MoneroComponents.RadioButton {
+                MidasComponents.RadioButton {
                     id: seedRadioButton
                     text: qsTr("Restore from seed") + translationManager.emptyString
                     fontSize: 16
@@ -127,7 +127,7 @@ Rectangle {
                     }
                 }
 
-                MoneroComponents.RadioButton {
+                MidasComponents.RadioButton {
                     id: keysRadioButton
                     text: qsTr("Restore from keys") + translationManager.emptyString
                     fontSize: 16
@@ -140,7 +140,7 @@ Rectangle {
                     }
                 }
 
-                MoneroComponents.RadioButton {
+                MidasComponents.RadioButton {
                     id: qrRadioButton
                     text: qsTr("Restore from QR Code") + translationManager.emptyString
                     fontSize: 16
@@ -173,53 +173,53 @@ Rectangle {
                     border.width: 1
                     border.color: {
                         if(seedInput.text !== "" && seedInput.error){
-                            return MoneroComponents.Style.inputBorderColorInvalid;
+                            return MidasComponents.Style.inputBorderColorInvalid;
                         } else if(seedInput.activeFocus){
-                            return MoneroComponents.Style.inputBorderColorActive;
+                            return MidasComponents.Style.inputBorderColorActive;
                         } else {
-                            return MoneroComponents.Style.inputBorderColorInActive;
+                            return MidasComponents.Style.inputBorderColorInActive;
                         }
                     }
 
-                    MoneroComponents.InputMulti {
+                    MidasComponents.InputMulti {
                         id: seedInput
                         property bool error: false
                         width: parent.width
                         height: 100
 
-                        color: MoneroComponents.Style.defaultFontColor
+                        color: MidasComponents.Style.defaultFontColor
                         textMargin: 2
                         text: ""
 
-                        font.family: MoneroComponents.Style.fontRegular.name
+                        font.family: MidasComponents.Style.fontRegular.name
                         font.pixelSize: 16
-                        selectionColor: MoneroComponents.Style.textSelectionColor
-                        selectedTextColor: MoneroComponents.Style.textSelectedColor
+                        selectionColor: MidasComponents.Style.textSelectionColor
+                        selectedTextColor: MidasComponents.Style.textSelectedColor
                         wrapMode: TextInput.Wrap
 
                         selectByMouse: true
 
-                        MoneroComponents.TextPlain {
+                        MidasComponents.TextPlain {
                             id: memoTextPlaceholder
                             opacity: 0.35
                             anchors.fill:parent
                             font.pixelSize: 16
                             anchors.margins: 8
                             anchors.leftMargin: 10
-                            font.family: MoneroComponents.Style.fontRegular.name
+                            font.family: MidasComponents.Style.fontRegular.name
                             text: qsTr("Enter your 25 word mnemonic seed") + translationManager.emptyString
-                            color: MoneroComponents.Style.defaultFontColor
+                            color: MidasComponents.Style.defaultFontColor
                             visible: !seedInput.text
                         }
                     }
                 }
 
-                MoneroComponents.CheckBox2 {
+                MidasComponents.CheckBox2 {
                     id: seedOffsetCheckbox
                     text: qsTr("Seed offset passphrase (optional)") + translationManager.emptyString
                 }
 
-                MoneroComponents.LineEdit {
+                MidasComponents.LineEdit {
                     id: seedOffset
                     password: true
                     Layout.fillWidth: true
@@ -229,7 +229,7 @@ Rectangle {
                 }
             }
 
-            MoneroComponents.LineEdit {
+            MidasComponents.LineEdit {
                 id: addressLine
                 visible: wizardController.walletRestoreMode === 'keys'
                 Layout.fillWidth: true
@@ -241,7 +241,7 @@ Rectangle {
                 }
             }
 
-            MoneroComponents.LineEdit {
+            MidasComponents.LineEdit {
                 id: viewKeyLine
                 visible: wizardController.walletRestoreMode === 'keys'
                 Layout.fillWidth: true
@@ -253,7 +253,7 @@ Rectangle {
                 }
             }
 
-            MoneroComponents.LineEdit {
+            MidasComponents.LineEdit {
                 id: spendKeyLine
                 visible: wizardController.walletRestoreMode === 'keys'
                 Layout.fillWidth: true
@@ -266,7 +266,7 @@ Rectangle {
             }
 
             GridLayout{
-                MoneroComponents.LineEdit {
+                MidasComponents.LineEdit {
                     id: restoreHeight
                     Layout.fillWidth: true
                     labelText: qsTr("Wallet creation date as `YYYY-MM-DD` or restore height") + translationManager.emptyString

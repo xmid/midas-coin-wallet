@@ -27,19 +27,19 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import QtQuick 2.9
-import "../components" as MoneroComponents
-import "../components/effects" as MoneroEffects
+import "../components" as MidasComponents
+import "../components/effects" as MidasEffects
 
-MoneroEffects.ImageMask {
+MidasEffects.ImageMask {
     id: button
     z: 666
-    color: MoneroComponents.Style.defaultFontColor
+    color: MidasComponents.Style.defaultFontColor
     image: ""
 
     property alias tooltip: tooltip.text
     signal clicked(var mouse)
 
-    MoneroComponents.Tooltip {
+    MidasComponents.Tooltip {
         id: tooltip
         anchors.fill: parent
         tooltipLeft: true

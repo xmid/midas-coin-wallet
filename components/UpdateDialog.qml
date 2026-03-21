@@ -30,9 +30,9 @@ import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.1
 
-import moneroComponents.Downloader 1.0
+import midasComponents.Downloader 1.0
 
-import "../components" as MoneroComponents
+import "../components" as MidasComponents
 
 Popup {
     id: updateDialog
@@ -48,9 +48,9 @@ Popup {
     property string version: ""
 
     background: Rectangle {
-        border.color: MoneroComponents.Style.appWindowBorderColor
+        border.color: MidasComponents.Style.appWindowBorderColor
         border.width: 1
-        color: MoneroComponents.Style.middlePanelBackgroundColor
+        color: MidasComponents.Style.middlePanelBackgroundColor
     }
     closePolicy: Popup.NoAutoClose
     padding: 20
@@ -70,17 +70,17 @@ Popup {
         spacing: updateDialog.padding
 
         Text {
-            color: MoneroComponents.Style.defaultFontColor
+            color: MidasComponents.Style.defaultFontColor
             font.bold: true
-            font.family: MoneroComponents.Style.fontRegular.name
+            font.family: MidasComponents.Style.fontRegular.name
             font.pixelSize: 18
-            text: qsTr("New Monero version v%1 is available.").arg(updateDialog.version)
+            text: qsTr("New Midas version v%1 is available.").arg(updateDialog.version)
         }
 
         Text {
             id: errorText
             color: "red"
-            font.family: MoneroComponents.Style.fontRegular.name
+            font.family: MidasComponents.Style.fontRegular.name
             font.pixelSize: 18
             text: updateDialog.error
             visible: text
@@ -88,8 +88,8 @@ Popup {
 
         Text {
             id: statusText
-            color: updateDialog.valid ? MoneroComponents.Style.green : MoneroComponents.Style.defaultFontColor
-            font.family: MoneroComponents.Style.fontRegular.name
+            color: updateDialog.valid ? MidasComponents.Style.green : MidasComponents.Style.defaultFontColor
+            font.family: MidasComponents.Style.fontRegular.name
             font.pixelSize: 18
             visible: !errorText.visible
 
@@ -112,13 +112,13 @@ Popup {
 
         Rectangle {
             id: progressBar
-            color: MoneroComponents.Style.lightGreyFontColor
+            color: MidasComponents.Style.lightGreyFontColor
             height: 3
             Layout.fillWidth: true
             visible: updateDialog.valid || downloader.active
 
             Rectangle {
-                color: MoneroComponents.Style.buttonBackgroundColor
+                color: MidasComponents.Style.buttonBackgroundColor
                 height: parent.height
                 width: parent.width * updateDialog.progress / 100
             }
@@ -128,7 +128,7 @@ Popup {
             Layout.alignment: Qt.AlignRight
             spacing: parent.spacing
 
-            MoneroComponents.StandardButton {
+            MidasComponents.StandardButton {
                 id: cancelButton
                 fontBold: false
                 primary: !updateDialog.url
@@ -148,7 +148,7 @@ Popup {
                 }
             }
 
-            MoneroComponents.StandardButton {
+            MidasComponents.StandardButton {
                 id: downloadButton
                 KeyNavigation.tab: cancelButton
                 fontBold: false
@@ -172,7 +172,7 @@ Popup {
                 }
             }
 
-            MoneroComponents.StandardButton {
+            MidasComponents.StandardButton {
                 id: saveButton
                 KeyNavigation.tab: cancelButton
                 fontBold: false

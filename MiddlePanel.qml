@@ -33,13 +33,13 @@ import QtQuick.Controls 2.0
 import QtQuick.Controls 1.4
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
-import moneroComponents.Wallet 1.0
+import midasComponents.Wallet 1.0
 
 import "./pages"
 import "./pages/settings"
 import "./pages/merchant"
-import "./components" as MoneroComponents
-import "./components/effects/" as MoneroEffects
+import "./components" as MidasComponents
+import "./components/effects/" as MidasEffects
 
 Rectangle {
     id: root
@@ -72,20 +72,20 @@ Rectangle {
     Rectangle {
         // grey background on merchantView
         visible: currentView === merchantView
-        color: MoneroComponents.Style.moneroGrey
+        color: MidasComponents.Style.moneroGrey
         anchors.fill: parent
     }
 
-    MoneroEffects.GradientBackground {
+    MidasEffects.GradientBackground {
         visible: currentView !== merchantView
         anchors.fill: parent
-        fallBackColor: MoneroComponents.Style.middlePanelBackgroundColor
-        initialStartColor: MoneroComponents.Style.middlePanelBackgroundGradientStart
-        initialStopColor: MoneroComponents.Style.middlePanelBackgroundGradientStop
-        blackColorStart: MoneroComponents.Style._b_middlePanelBackgroundGradientStart
-        blackColorStop: MoneroComponents.Style._b_middlePanelBackgroundGradientStop
-        whiteColorStart: MoneroComponents.Style._w_middlePanelBackgroundGradientStart
-        whiteColorStop: MoneroComponents.Style._w_middlePanelBackgroundGradientStop
+        fallBackColor: MidasComponents.Style.middlePanelBackgroundColor
+        initialStartColor: MidasComponents.Style.middlePanelBackgroundGradientStart
+        initialStopColor: MidasComponents.Style.middlePanelBackgroundGradientStop
+        blackColorStart: MidasComponents.Style._b_middlePanelBackgroundGradientStart
+        blackColorStop: MidasComponents.Style._b_middlePanelBackgroundGradientStop
+        whiteColorStart: MidasComponents.Style._w_middlePanelBackgroundGradientStart
+        whiteColorStop: MidasComponents.Style._w_middlePanelBackgroundGradientStop
         start: Qt.point(0, 0)
         end: Qt.point(height, width)
     }
@@ -237,12 +237,12 @@ Rectangle {
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         width: 1
-        color: MoneroComponents.Style.appWindowBorderColor
+        color: MidasComponents.Style.appWindowBorderColor
 
-        MoneroEffects.ColorTransition {
+        MidasEffects.ColorTransition {
             targetObj: parent
-            blackColor: MoneroComponents.Style._b_appWindowBorderColor
-            whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+            blackColor: MidasComponents.Style._b_appWindowBorderColor
+            whiteColor: MidasComponents.Style._w_appWindowBorderColor
         }
     }
 

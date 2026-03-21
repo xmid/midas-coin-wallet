@@ -32,28 +32,28 @@ import QtQuick.Dialogs 1.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Window 2.0
-import moneroComponents.Wallet 1.0
+import midasComponents.Wallet 1.0
 
-import "../components" as MoneroComponents
+import "../components" as MidasComponents
 
 Window {
     id: root
     modality: Qt.ApplicationModal
     flags: Qt.Window | Qt.FramelessWindowHint
-    property int countDown: 10;
+    property int countDown: 1;
     signal rejected()
     signal started();
 
     function open() {
         show()
-        countDown = 10;
+        countDown = 1;
         timer.start();
     }
 
     // TODO: implement without hardcoding sizes
     width: 480
     height: 200
-    color: MoneroComponents.Style.middlePanelBackgroundColor
+    color: MidasComponents.Style.middlePanelBackgroundColor
 
     // Make window draggable
     MouseArea {
@@ -95,14 +95,14 @@ Window {
                 }
             }
 
-            MoneroComponents.TextPlain {
+            MidasComponents.TextPlain {
                 text: qsTr("Starting local node in %1 seconds").arg(countDown) + translationManager.emptyString;
                 font.pixelSize: 18
                 Layout.alignment: Qt.AlignHCenter
                 Layout.fillWidth: true
                 horizontalAlignment: Text.AlignHCenter
                 themeTransition: false
-                color: MoneroComponents.Style.defaultFontColor
+                color: MidasComponents.Style.defaultFontColor
             }
 
         }
@@ -112,7 +112,7 @@ Window {
             spacing: 60
             Layout.alignment: Qt.AlignHCenter
 
-            MoneroComponents.StandardButton {
+            MidasComponents.StandardButton {
                 id: okButton
                 visible:false
                 fontSize: 14
@@ -126,7 +126,7 @@ Window {
                 }
             }
 
-            MoneroComponents.StandardButton {
+            MidasComponents.StandardButton {
                 id: cancelButton
                 fontSize: 14
                 text: qsTr("Use custom settings") + translationManager.emptyString

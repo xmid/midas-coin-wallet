@@ -1,19 +1,19 @@
-; Monero Fluorine Fermi GUI Wallet Installer for Windows
-; Copyright (c) 2017-2024, The Monero Project
+; Midas GUI Wallet Installer for Windows
+; Copyright (c) 2017-2024, The Midas Project
 ; See LICENSE
-#define GuiVersion GetFileVersion("bin\monero-wallet-gui.exe")
+#define GuiVersion GetFileVersion("bin\midas-wallet-gui.exe")
 
 [Setup]
-AppName=Monero GUI Wallet
+AppName=Midas GUI Wallet
 ; For InnoSetup this is the property that uniquely identifies the application as such
 ; Thus it's important to keep this stable over releases
 ; With a different "AppName" InnoSetup would treat a mere update as a completely new application and thus mess up
 
 AppVersion={#GuiVersion}
 VersionInfoVersion={#GuiVersion}
-DefaultDirName={commonpf}\Monero GUI Wallet
-DefaultGroupName=Monero GUI Wallet
-UninstallDisplayIcon={app}\monero-wallet-gui.exe
+DefaultDirName={commonpf}\Midas GUI Wallet
+DefaultGroupName=Midas GUI Wallet
+UninstallDisplayIcon={app}\midas-wallet-gui.exe
 PrivilegesRequired=admin
 ArchitecturesInstallIn64BitMode=x64
 ArchitecturesAllowed=x64 arm64
@@ -21,8 +21,8 @@ WizardSmallImageFile=WizardSmallImage.bmp
 WizardImageFile=WelcomeImage.bmp
 DisableWelcomePage=no
 LicenseFile=LICENSE
-AppPublisher=The Monero Developer Community
-AppPublisherURL=https://getmonero.org
+AppPublisher=The Midas Developer Community
+AppPublisherURL=https://getmidas.org
 TimeStampsInUTC=yes
 CompressionThreads=1
 

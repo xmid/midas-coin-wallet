@@ -30,7 +30,7 @@ import QtQuick 2.9
 import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Layouts 1.1
-import "../components" as MoneroComponents
+import "../components" as MidasComponents
 import "."
 
 ColumnLayout {
@@ -44,29 +44,29 @@ ColumnLayout {
     property alias prooveView: stateView.prooveView
     property alias state: stateView.state
 
-    MoneroComponents.Navbar {
+    MidasComponents.Navbar {
         id: navbarId
         Layout.alignment: Qt.AlignHCenter
         Layout.topMargin: height
         Layout.bottomMargin: height
 
-        MoneroComponents.NavbarItem {
+        MidasComponents.NavbarItem {
             active: state == "Mining"
             text: qsTr("Mining") + translationManager.emptyString
             onSelected: state = "Mining"
             visible: !isAndroid
         }
-        MoneroComponents.NavbarItem {
+        MidasComponents.NavbarItem {
             active: state == "Prove"
             text: qsTr("Prove/check") + translationManager.emptyString
             onSelected: state = "Prove"
         }
-        MoneroComponents.NavbarItem {
+        MidasComponents.NavbarItem {
             active: state == "SharedRingDB"
             text: qsTr("Shared RingDB") + translationManager.emptyString
             onSelected: state = "SharedRingDB"
         }
-        MoneroComponents.NavbarItem {
+        MidasComponents.NavbarItem {
             active: state == "Sign"
             text: qsTr("Sign/verify") + translationManager.emptyString
             onSelected: state = "Sign"

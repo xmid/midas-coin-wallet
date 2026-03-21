@@ -33,7 +33,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Window 2.0
 
-import "../components" as MoneroComponents
+import "../components" as MidasComponents
 
 Item {
     id: root
@@ -79,33 +79,33 @@ Item {
                 Layout.fillWidth: true
 
                 font.pixelSize: 16
-                font.family: MoneroComponents.Style.fontLight.name
+                font.family: MidasComponents.Style.fontLight.name
 
-                color: MoneroComponents.Style.defaultFontColor
+                color: MidasComponents.Style.defaultFontColor
             }
 
-            MoneroComponents.Input {
+            MidasComponents.Input {
                 id : input
                 focus: true
                 Layout.topMargin: 6
                 Layout.fillWidth: true
                 horizontalAlignment: TextInput.AlignLeft
                 verticalAlignment: TextInput.AlignVCenter
-                font.family: MoneroComponents.Style.fontLight.name
+                font.family: MidasComponents.Style.fontLight.name
                 font.pixelSize: 24
                 KeyNavigation.tab: okButton
                 bottomPadding: 10
                 leftPadding: 10
                 topPadding: 10
-                color: MoneroComponents.Style.defaultFontColor
-                selectionColor: MoneroComponents.Style.textSelectionColor
-                selectedTextColor: MoneroComponents.Style.textSelectedColor
+                color: MidasComponents.Style.defaultFontColor
+                selectionColor: MidasComponents.Style.textSelectionColor
+                selectedTextColor: MidasComponents.Style.textSelectedColor
 
                 background: Rectangle {
                     radius: 2
-                    border.color: MoneroComponents.Style.inputBorderColorActive
+                    border.color: MidasComponents.Style.inputBorderColorActive
                     border.width: 1
-                    color: MoneroComponents.Style.blackTheme ? "black" : "#A9FFFFFF"
+                    color: MidasComponents.Style.blackTheme ? "black" : "#A9FFFFFF"
                 }
 
                 Keys.enabled: root.visible
@@ -127,7 +127,7 @@ Item {
                 Layout.topMargin: 16
                 Layout.alignment: Qt.AlignRight
 
-                MoneroComponents.StandardButton {
+                MidasComponents.StandardButton {
                     id: cancelButton
                     primary: false
                     small: true
@@ -140,7 +140,7 @@ Item {
                         root.rejected()
                     }
                 }
-                MoneroComponents.StandardButton {
+                MidasComponents.StandardButton {
                     id: okButton
                     small: true
                     width: 120

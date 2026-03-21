@@ -27,9 +27,9 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import QtQuick 2.9
-import moneroComponents.Wallet 1.0
+import midasComponents.Wallet 1.0
 
-import "../components" as MoneroComponents
+import "../components" as MidasComponents
 
 Rectangle {
     id: item
@@ -61,27 +61,27 @@ Rectangle {
         anchors.rightMargin: 15
         anchors.fill: parent
 
-        MoneroComponents.TextPlain {
+        MidasComponents.TextPlain {
             id: progressText
             anchors.top: parent.top
             anchors.topMargin: 6
-            font.family: MoneroComponents.Style.fontMedium.name
+            font.family: MidasComponents.Style.fontMedium.name
             font.pixelSize: 13
-            font.bold: MoneroComponents.Style.progressBarProgressTextBold
-            color: MoneroComponents.Style.defaultFontColor
+            font.bold: MidasComponents.Style.progressBarProgressTextBold
+            color: MidasComponents.Style.defaultFontColor
             text: qsTr("Synchronizing %1").arg(syncType) + translationManager.emptyString
             height: 18
         }
 
-        MoneroComponents.TextPlain {
+        MidasComponents.TextPlain {
             id: progressTextValue
             anchors.top: parent.top
             anchors.topMargin: 6
             anchors.right: parent.right
-            font.family: MoneroComponents.Style.fontMedium.name
+            font.family: MidasComponents.Style.fontMedium.name
             font.pixelSize: 13
-            font.bold: MoneroComponents.Style.progressBarProgressTextBold
-            color: MoneroComponents.Style.defaultFontColor
+            font.bold: MidasComponents.Style.progressBarProgressTextBold
+            color: MidasComponents.Style.defaultFontColor
             height:18
         }
 
@@ -93,17 +93,17 @@ Rectangle {
             anchors.topMargin: 4
             height: 8
             radius: 8
-            color: MoneroComponents.Style.progressBarBackgroundColor
+            color: MidasComponents.Style.progressBarBackgroundColor
 
             states: [
                 State {
                     name: "black";
-                    when: MoneroComponents.Style.blackTheme
-                    PropertyChanges { target: bar; color: MoneroComponents.Style._b_progressBarBackgroundColor}
+                    when: MidasComponents.Style.blackTheme
+                    PropertyChanges { target: bar; color: MidasComponents.Style._b_progressBarBackgroundColor}
                 }, State {
                     name: "white";
-                    when: !MoneroComponents.Style.blackTheme
-                    PropertyChanges { target: bar; color: MoneroComponents.Style._w_progressBarBackgroundColor}
+                    when: !MidasComponents.Style.blackTheme
+                    PropertyChanges { target: bar; color: MidasComponents.Style._w_progressBarBackgroundColor}
                 }
             ]
 

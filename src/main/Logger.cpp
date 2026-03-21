@@ -38,19 +38,19 @@
 #include <easylogging++.h>
 #include <wallet/api/wallet2_api.h>
 
-#include "qt/MoneroSettings.h"
+#include "qt/MidasSettings.h"
 #include "qt/TailsOS.h"
 
 // default log path by OS (should be writable)
-static const QString defaultLogName = "monero-wallet-gui.log";
+static const QString defaultLogName = "midas-wallet-gui.log";
 #if defined(Q_OS_IOS)
     //AppDataLocation = "<APPROOT>/Library/Application Support"
     static const QString osPath = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation).at(0);
-    static const QString appFolder = "monero-wallet-gui";
+    static const QString appFolder = "midas-wallet-gui";
 #elif defined(Q_OS_WIN)
     //AppDataLocation = "C:/Users/<USER>/AppData/Roaming/<APPNAME>"
     static const QString osPath = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation).at(0);
-    static const QString appFolder = "monero-wallet-gui";
+    static const QString appFolder = "midas-wallet-gui";
 #elif defined(Q_OS_ANDROID)
     //AppDataLocation = "<USER>/<APPNAME>/files"
     static const QString osPath = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation).at(1);
@@ -77,7 +77,7 @@ const QString getLogPath(const QString &userDefinedLogFilePath, bool portable)
 
     if (portable)
     {
-        return QDir(MoneroSettings::portableFolderName()).filePath(defaultLogName);
+        return QDir(MidasSettings::portableFolderName()).filePath(defaultLogName);
     }
 
     if(TailsOS::detect() && TailsOS::usePersistence)
@@ -123,7 +123,7 @@ Logger::Logger(QCoreApplication &parent, QString userDefinedLogFilePath)
 void Logger::resetLogFilePath(bool portable)
 {
     m_logFilePath = QDir::toNativeSeparators(getLogPath(m_userDefinedLogFilePath, portable));
-    Monero::Wallet::init(m_applicationFilePath.c_str(), "monero-wallet-gui", m_logFilePath.toStdString(), true);
+    Monero::Wallet::init(m_applicationFilePath.c_str(), "midas-wallet-gui", m_logFilePath.toStdString(), true);
     qWarning() << "Logging to" << m_logFilePath;
     emit logFilePathChanged();
 }

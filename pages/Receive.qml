@@ -33,16 +33,16 @@ import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.2
 import FontAwesome 1.0
 
-import "../components" as MoneroComponents
-import "../components/effects/" as MoneroEffects
+import "../components" as MidasComponents
+import "../components/effects/" as MidasEffects
 
-import moneroComponents.Clipboard 1.0
-import moneroComponents.Wallet 1.0
-import moneroComponents.WalletManager 1.0
-import moneroComponents.TransactionHistory 1.0
-import moneroComponents.TransactionHistoryModel 1.0
-import moneroComponents.Subaddress 1.0
-import moneroComponents.SubaddressModel 1.0
+import midasComponents.Clipboard 1.0
+import midasComponents.Wallet 1.0
+import midasComponents.WalletManager 1.0
+import midasComponents.TransactionHistory 1.0
+import midasComponents.TransactionHistoryModel 1.0
+import midasComponents.Subaddress 1.0
+import midasComponents.SubaddressModel 1.0
 import "../js/TxUtils.js" as TxUtils
 
 Rectangle {
@@ -91,17 +91,17 @@ Rectangle {
             spacing: 0
             property int qrSize: 220
 
-            MoneroComponents.Navbar {
+            MidasComponents.Navbar {
                 Layout.alignment: Qt.AlignHCenter
                 Layout.bottomMargin: 10
 
-                MoneroComponents.NavbarItem {
+                MidasComponents.NavbarItem {
                     active: state == "Address"
                     text: qsTr("Address") + translationManager.emptyString
                     onSelected: state = "Address"
                 }
 
-                MoneroComponents.NavbarItem {
+                MidasComponents.NavbarItem {
                     active: state == "PaymentRequest"
                     text: qsTr("Payment request") + translationManager.emptyString
                     onSelected: {
@@ -113,7 +113,7 @@ Rectangle {
 
             Rectangle {
                 id: qrContainer
-                color: MoneroComponents.Style.blackTheme ? "white" : "transparent"
+                color: MidasComponents.Style.blackTheme ? "white" : "transparent"
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
                 Layout.maximumWidth: parent.qrSize
@@ -166,13 +166,13 @@ Rectangle {
                     }
                 }
 
-                MoneroComponents.Tooltip {
+                MidasComponents.Tooltip {
                     id: qrCodeTooltip
                     text: qsTr("Left click: copy QR code to clipboard") + "<br>" +  qsTr("Right click: save QR code as image file") + translationManager.emptyString
                 }
             }
 
-            MoneroComponents.TextPlain {
+            MidasComponents.TextPlain {
                 id: qrCodeText
                 Layout.alignment: Qt.AlignHCenter
                 Layout.topMargin: 6
@@ -181,7 +181,7 @@ Rectangle {
                 verticalAlignment: Text.AlignVCenter
                 visible: paymentRequestGridLayout.visible
                 font.pixelSize: 12
-                color: qrCodeTextMouseArea.containsMouse ? MoneroComponents.Style.orange : MoneroComponents.Style.defaultFontColor
+                color: qrCodeTextMouseArea.containsMouse ? MidasComponents.Style.orange : MidasComponents.Style.defaultFontColor
                 text: generateQRCodeString();
                 wrapMode: Text.WrapAnywhere
                 tooltip: qsTr("Copy payment request to clipboard") + translationManager.emptyString
@@ -211,7 +211,7 @@ Rectangle {
                 Layout.preferredWidth: 285
                 Layout.maximumWidth: 285
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     id: amountTitleFiat
                     Layout.bottomMargin: 3
                     Layout.preferredWidth: 90
@@ -220,26 +220,26 @@ Rectangle {
                     text: qsTr("Amount") + translationManager.emptyString
                 }
 
-                MoneroComponents.Input {
+                MidasComponents.Input {
                     id: amountToReceiveFiat
                     Layout.preferredWidth: 165
                     Layout.maximumWidth: 165
                     visible: persistentSettings.fiatPriceEnabled
                     topPadding: 5
                     leftPadding: 5
-                    font.family: MoneroComponents.Style.fontMonoRegular.name
+                    font.family: MidasComponents.Style.fontMonoRegular.name
                     font.pixelSize: 14
                     font.bold: false
                     horizontalAlignment: TextInput.AlignLeft
                     verticalAlignment: TextInput.AlignVCenter
                     selectByMouse: true
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: MidasComponents.Style.defaultFontColor
                     placeholderText: "0.00"
 
                     background: Rectangle {
-                        color: MoneroComponents.Style.blackTheme ? "transparent" : "white"
+                        color: MidasComponents.Style.blackTheme ? "transparent" : "white"
                         radius: 3
-                        border.color: parent.activeFocus ? MoneroComponents.Style.inputBorderColorActive : MoneroComponents.Style.inputBorderColorInActive
+                        border.color: parent.activeFocus ? MidasComponents.Style.inputBorderColorActive : MidasComponents.Style.inputBorderColorInActive
                         border.width: 1
                     }
                     onTextEdited: {
@@ -266,14 +266,14 @@ Rectangle {
                     }
                 }
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     Layout.bottomMargin: 3
                     visible: persistentSettings.fiatPriceEnabled
                     fontSize: 14
                     text: appWindow.fiatApiCurrencySymbol();
                 }
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     id: amountTitleXMR
                     Layout.bottomMargin: 3
                     Layout.preferredWidth: 90
@@ -281,25 +281,25 @@ Rectangle {
                     text: persistentSettings.fiatPriceEnabled ? "" : qsTr("Amount") + translationManager.emptyString
                 }
 
-                MoneroComponents.Input {
+                MidasComponents.Input {
                     id: amountToReceiveXMR
                     Layout.preferredWidth: 165
                     Layout.maximumWidth: 165
                     topPadding: 5
                     leftPadding: 5
-                    font.family: MoneroComponents.Style.fontMonoRegular.name
+                    font.family: MidasComponents.Style.fontMonoRegular.name
                     font.pixelSize: 14
                     font.bold: false
                     horizontalAlignment: TextInput.AlignLeft
                     verticalAlignment: TextInput.AlignVCenter
                     selectByMouse: true
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: MidasComponents.Style.defaultFontColor
                     placeholderText: "0.000000000000"
 
                     background: Rectangle {
-                        color: MoneroComponents.Style.blackTheme ? "transparent" : "white"
+                        color: MidasComponents.Style.blackTheme ? "transparent" : "white"
                         radius: 3
-                        border.color: parent.activeFocus ? MoneroComponents.Style.inputBorderColorActive : MoneroComponents.Style.inputBorderColorInActive
+                        border.color: parent.activeFocus ? MidasComponents.Style.inputBorderColorActive : MidasComponents.Style.inputBorderColorInActive
                         border.width: 1
                     }
                     onTextEdited: {
@@ -326,13 +326,13 @@ Rectangle {
                     }
                 }
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     Layout.bottomMargin: 3
                     fontSize: 14
-                    text: "XMR"
+                    text: "XMID"
                 }
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     id: txDescription
                     Layout.bottomMargin: 3
                     Layout.preferredWidth: 90
@@ -342,7 +342,7 @@ Rectangle {
                     tooltipIconVisible: true
                 }
 
-                MoneroComponents.Input {
+                MidasComponents.Input {
                     id: txDescriptionInput
                     Layout.preferredWidth: 165
                     Layout.maximumWidth: 165
@@ -354,24 +354,24 @@ Rectangle {
                     horizontalAlignment: TextInput.AlignLeft
                     verticalAlignment: TextInput.AlignVCenter
                     selectByMouse: true
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: MidasComponents.Style.defaultFontColor
                     placeholderText: qsTr("Visible to the sender") + translationManager.emptyString
 
                     background: Rectangle {
-                        color: MoneroComponents.Style.blackTheme ? "transparent" : "white"
+                        color: MidasComponents.Style.blackTheme ? "transparent" : "white"
                         radius: 3
-                        border.color: parent.activeFocus ? MoneroComponents.Style.inputBorderColorActive : MoneroComponents.Style.inputBorderColorInActive
+                        border.color: parent.activeFocus ? MidasComponents.Style.inputBorderColorActive : MidasComponents.Style.inputBorderColorInActive
                         border.width: 1
                     }
                 }
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     Layout.bottomMargin: 3
                     fontSize: 14
                     text: ""
                 }
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     id: receiverNameLabel
                     Layout.bottomMargin: 3
                     Layout.preferredWidth: 90
@@ -381,7 +381,7 @@ Rectangle {
                     tooltipIconVisible: true
                 }
 
-                MoneroComponents.Input {
+                MidasComponents.Input {
                     id: receiverNameInput
                     Layout.preferredWidth: 165
                     Layout.maximumWidth: 165
@@ -392,26 +392,26 @@ Rectangle {
                     horizontalAlignment: TextInput.AlignLeft
                     verticalAlignment: TextInput.AlignVCenter
                     selectByMouse: true
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: MidasComponents.Style.defaultFontColor
                     placeholderText: qsTr("Visible to the sender") + translationManager.emptyString
                     maximumLength: 100
 
                     background: Rectangle {
-                        color: MoneroComponents.Style.blackTheme ? "transparent" : "white"
+                        color: MidasComponents.Style.blackTheme ? "transparent" : "white"
                         radius: 3
-                        border.color: parent.activeFocus ? MoneroComponents.Style.inputBorderColorActive : MoneroComponents.Style.inputBorderColorInActive
+                        border.color: parent.activeFocus ? MidasComponents.Style.inputBorderColorActive : MidasComponents.Style.inputBorderColorInActive
                         border.width: 1
                     }
                 }
 
-                MoneroComponents.Label {
+                MidasComponents.Label {
                     Layout.bottomMargin: 3
                     fontSize: 14
                     text: ""
                 }
             }
 
-            MoneroComponents.TextPlain {
+            MidasComponents.TextPlain {
                 id: selectedaddressIndex
                 Layout.alignment: Qt.AlignHCenter
                 Layout.preferredWidth: 220
@@ -421,14 +421,14 @@ Rectangle {
                 horizontalAlignment: Text.AlignHCenter
                 text: qsTr("Address #") + subaddressListView.currentIndex + translationManager.emptyString
                 wrapMode: Text.WordWrap
-                font.family: MoneroComponents.Style.fontRegular.name
+                font.family: MidasComponents.Style.fontRegular.name
                 font.pixelSize: 17
                 textFormat: Text.RichText
-                color: MoneroComponents.Style.defaultFontColor
+                color: MidasComponents.Style.defaultFontColor
                 themeTransition: false
             }
 
-            MoneroComponents.TextPlain {
+            MidasComponents.TextPlain {
                 id: selectedAddressDrescription
                 Layout.alignment: Qt.AlignHCenter
                 Layout.preferredWidth: 220
@@ -438,10 +438,10 @@ Rectangle {
                 horizontalAlignment: Text.AlignHCenter
                 text: "(" + qsTr("no label") + ")" + translationManager.emptyString
                 wrapMode: Text.WordWrap
-                font.family: MoneroComponents.Style.fontRegular.name
+                font.family: MidasComponents.Style.fontRegular.name
                 font.pixelSize: 17
                 textFormat: Text.RichText
-                color: selectedAddressDrescriptionMouseArea.containsMouse ? MoneroComponents.Style.orange : MoneroComponents.Style.dimmedFontColor
+                color: selectedAddressDrescriptionMouseArea.containsMouse ? MidasComponents.Style.orange : MidasComponents.Style.dimmedFontColor
                 themeTransition: false
                 tooltip: subaddressListView.currentIndex > 0 ? qsTr("Edit address label") : "" + translationManager.emptyString
                 MouseArea {
@@ -458,7 +458,7 @@ Rectangle {
                 }
             }
 
-            MoneroComponents.TextPlain {
+            MidasComponents.TextPlain {
                 id: selectedAddress
                 Layout.alignment: Qt.AlignHCenter
                 Layout.maximumWidth: 300
@@ -468,9 +468,9 @@ Rectangle {
                 horizontalAlignment: TextInput.AlignHCenter
                 wrapMode: Text.Wrap
                 textFormat: Text.RichText
-                color: selectedAddressMouseArea.containsMouse ? MoneroComponents.Style.orange : MoneroComponents.Style.defaultFontColor
+                color: selectedAddressMouseArea.containsMouse ? MidasComponents.Style.orange : MidasComponents.Style.defaultFontColor
                 font.pixelSize: 15
-                font.family: MoneroComponents.Style.fontRegular.name
+                font.family: MidasComponents.Style.fontRegular.name
                 themeTransition: false
                 tooltip: qsTr("Copy address to clipboard") + translationManager.emptyString
                 MouseArea {
@@ -487,7 +487,7 @@ Rectangle {
                 }
             }
 
-            MoneroComponents.StandardButton {
+            MidasComponents.StandardButton {
                 Layout.preferredWidth: 220
                 Layout.alignment: Qt.AlignHCenter
                 Layout.topMargin: 18
@@ -511,14 +511,14 @@ Rectangle {
             RowLayout {
                 spacing: 0
 
-                MoneroComponents.LabelSubheader {
+                MidasComponents.LabelSubheader {
                     Layout.fillWidth: true
                     fontSize: 24
                     textFormat: Text.RichText
                     text: qsTr("Addresses") + translationManager.emptyString
                 }
 
-                MoneroComponents.StandardButton {
+                MidasComponents.StandardButton {
                     id: createAddressButton
                     small: true
                     text: qsTr("Create new address") + translationManager.emptyString
@@ -540,12 +540,12 @@ Rectangle {
                         anchors.left: createAddressButton.left
                         anchors.right: createAddressButton.right
                         height: 2
-                        color: MoneroComponents.Style.appWindowBorderColor
+                        color: MidasComponents.Style.appWindowBorderColor
 
-                        MoneroEffects.ColorTransition {
+                        MidasEffects.ColorTransition {
                             targetObj: parent
-                            blackColor: MoneroComponents.Style._b_appWindowBorderColor
-                            whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+                            blackColor: MidasComponents.Style._b_appWindowBorderColor
+                            whiteColor: MidasComponents.Style._w_appWindowBorderColor
                         }
                     }
                 }
@@ -573,7 +573,7 @@ Rectangle {
                         height: subaddressListRow.subaddressListItemHeight
                         width: parent ? parent.width : undefined
                         Layout.fillWidth: true
-                        color: itemMouseArea.containsMouse || index === appWindow.current_subaddress_table_index ? MoneroComponents.Style.titleBarButtonHoverColor : "transparent"
+                        color: itemMouseArea.containsMouse || index === appWindow.current_subaddress_table_index ? MidasComponents.Style.titleBarButtonHoverColor : "transparent"
 
                         Rectangle {
                             visible: index === appWindow.current_subaddress_table_index
@@ -581,7 +581,7 @@ Rectangle {
                             anchors.top: parent.top
                             anchors.bottom: parent.bottom
                             property int currentAccountIndex: currentWallet ? currentWallet.currentSubaddressAccount : 0
-                            color: MoneroComponents.Style.accountColors[currentAccountIndex % MoneroComponents.Style.accountColors.length]
+                            color: MidasComponents.Style.accountColors[currentAccountIndex % MidasComponents.Style.accountColors.length]
                             width: 2
                         }
 
@@ -590,13 +590,13 @@ Rectangle {
                             anchors.left: parent.left
                             anchors.top: parent.top
                             height: 1
-                            color: MoneroComponents.Style.appWindowBorderColor
+                            color: MidasComponents.Style.appWindowBorderColor
                             visible: index !== 0
 
-                            MoneroEffects.ColorTransition {
+                            MidasEffects.ColorTransition {
                                 targetObj: parent
-                                blackColor: MoneroComponents.Style._b_appWindowBorderColor
-                                whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+                                blackColor: MidasComponents.Style._b_appWindowBorderColor
+                                whiteColor: MidasComponents.Style._w_appWindowBorderColor
                             }
                         }
 
@@ -606,9 +606,9 @@ Rectangle {
                             anchors.rightMargin: 90
                             color: "transparent"
 
-                            MoneroComponents.Label {
+                            MidasComponents.Label {
                                 id: idLabel
-                                color: index === appWindow.current_subaddress_table_index ? MoneroComponents.Style.defaultFontColor : "#757575"
+                                color: index === appWindow.current_subaddress_table_index ? MidasComponents.Style.defaultFontColor : "#757575"
                                 anchors.verticalCenter: parent.verticalCenter
                                 anchors.left: parent.left
                                 anchors.leftMargin: 6
@@ -617,9 +617,9 @@ Rectangle {
                                 themeTransition: false
                             }
 
-                            MoneroComponents.Label {
+                            MidasComponents.Label {
                                 id: nameLabel
-                                color: index === appWindow.current_subaddress_table_index ? MoneroComponents.Style.defaultFontColor : MoneroComponents.Style.dimmedFontColor
+                                color: index === appWindow.current_subaddress_table_index ? MidasComponents.Style.defaultFontColor : MidasComponents.Style.dimmedFontColor
                                 anchors.verticalCenter: parent.verticalCenter
                                 anchors.left: idLabel.right
                                 anchors.leftMargin: 6
@@ -630,14 +630,14 @@ Rectangle {
                                 themeTransition: false
                             }
 
-                            MoneroComponents.Label {
+                            MidasComponents.Label {
                                 id: addressLabel
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: MidasComponents.Style.defaultFontColor
                                 anchors.verticalCenter: parent.verticalCenter
                                 anchors.left: parent.right
                                 anchors.leftMargin: -addressLabel.width - 5
                                 fontSize: 16
-                                fontFamily: MoneroComponents.Style.fontMonoRegular.name;
+                                fontFamily: MidasComponents.Style.fontMonoRegular.name;
                                 text: TxUtils.addressTruncatePretty(address, mainLayout.width < 520 ? 1 : (mainLayout.width < 650 ? 2 : 3))
                                 themeTransition: false
                             }
@@ -658,10 +658,10 @@ Rectangle {
                             height: 21
                             spacing: 10
 
-                            MoneroComponents.IconButton {
+                            MidasComponents.IconButton {
                                 fontAwesomeFallbackIcon: FontAwesome.searchPlus
                                 fontAwesomeFallbackSize: 22
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: MidasComponents.Style.defaultFontColor
                                 fontAwesomeFallbackOpacity: 0.5
                                 Layout.preferredWidth: 23
                                 Layout.preferredHeight: 21
@@ -670,12 +670,12 @@ Rectangle {
                                 onClicked: doSearchInHistory(address)
                             }
 
-                            MoneroComponents.IconButton {
+                            MidasComponents.IconButton {
                                 id: renameButton
                                 image: "qrc:///images/edit.svg"
                                 fontAwesomeFallbackIcon: FontAwesome.edit
                                 fontAwesomeFallbackSize: 22
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: MidasComponents.Style.defaultFontColor
                                 opacity: isOpenGL ? 0.5 : 1
                                 fontAwesomeFallbackOpacity: 0.5
                                 Layout.preferredWidth: 23
@@ -688,12 +688,12 @@ Rectangle {
                                 }
                             }
 
-                            MoneroComponents.IconButton {
+                            MidasComponents.IconButton {
                                 id: copyButton
                                 image: "qrc:///images/copy.svg"
                                 fontAwesomeFallbackIcon: FontAwesome.clipboard
                                 fontAwesomeFallbackSize: 22
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: MidasComponents.Style.defaultFontColor
                                 opacity: isOpenGL ? 0.5 : 1
                                 fontAwesomeFallbackOpacity: 0.5
                                 Layout.preferredWidth: 16
@@ -730,14 +730,14 @@ Rectangle {
             }
 
             Rectangle {
-                color: MoneroComponents.Style.appWindowBorderColor
+                color: MidasComponents.Style.appWindowBorderColor
                 Layout.fillWidth: true
                 height: 1
 
-                MoneroEffects.ColorTransition {
+                MidasEffects.ColorTransition {
                     targetObj: parent
-                    blackColor: MoneroComponents.Style._b_appWindowBorderColor
-                    whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+                    blackColor: MidasComponents.Style._b_appWindowBorderColor
+                    whiteColor: MidasComponents.Style._w_appWindowBorderColor
                 }
             }
         }

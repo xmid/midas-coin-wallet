@@ -69,10 +69,10 @@ public:
 
     WalletKeysFilesModel(QObject *parent = 0);
 
-    Q_INVOKABLE void refresh(const QString &moneroAccountsDir);
+    Q_INVOKABLE void refresh(const QString &midasAccountsDir);
     Q_INVOKABLE void clear();
 
-    void findWallets(const QString &moneroAccountsDir);
+    void findWallets(const QString &midasAccountsDir);
     void addWalletKeysFile(const WalletKeysFiles &walletKeysFile);
     int rowCount(const QModelIndex & parent = QModelIndex()) const;
 

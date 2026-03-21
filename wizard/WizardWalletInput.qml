@@ -34,7 +34,7 @@ import FontAwesome 1.0
 
 import "../js/Wizard.js" as Wizard
 import "../components"
-import "../components" as MoneroComponents
+import "../components" as MidasComponents
 
 GridLayout {
     id: grid
@@ -69,7 +69,7 @@ GridLayout {
     }
 
     ColumnLayout {
-        MoneroComponents.LineEdit {
+        MidasComponents.LineEdit {
             id: walletName
             Layout.preferredWidth: grid.width/5
 
@@ -115,7 +115,7 @@ GridLayout {
         RowLayout {
             Layout.preferredWidth: grid.width/5
 
-            MoneroComponents.TextPlain {
+            MidasComponents.TextPlain {
                 visible: errorMessageWalletName.text != ""
                 font.family: FontAwesome.fontFamilySolid
                 font.styleName: "Solid"
@@ -125,10 +125,10 @@ GridLayout {
                 themeTransition: false
             }
 
-            MoneroComponents.TextPlain {
+            MidasComponents.TextPlain {
                 id: errorMessageWalletName
                 textFormat: Text.PlainText
-                font.family: MoneroComponents.Style.fontRegular.name
+                font.family: MidasComponents.Style.fontRegular.name
                 font.pixelSize: 14
                 color: "#FF0000"
                 themeTransition: false
@@ -145,7 +145,7 @@ GridLayout {
     ColumnLayout {
         visible: appWindow.walletMode >= 2
 
-        MoneroComponents.LineEdit {
+        MidasComponents.LineEdit {
             id: walletLocation
             Layout.preferredWidth: grid.width/3
 
@@ -177,7 +177,7 @@ GridLayout {
             KeyNavigation.down: browseButton
             KeyNavigation.tab: browseButton
 
-            MoneroComponents.InlineButton {
+            MidasComponents.InlineButton {
                 id: browseButton
                 fontFamily: FontAwesome.fontFamilySolid
                 fontStyleName: "Solid"
@@ -202,7 +202,7 @@ GridLayout {
         RowLayout {
             Layout.preferredWidth: grid.width/3
 
-            MoneroComponents.TextPlain {
+            MidasComponents.TextPlain {
                 visible: errorMessageWalletLocation.text != ""
                 font.family: FontAwesome.fontFamilySolid
                 font.styleName: "Solid"
@@ -212,10 +212,10 @@ GridLayout {
                 themeTransition: false
             }
 
-            MoneroComponents.TextPlain {
+            MidasComponents.TextPlain {
                 id: errorMessageWalletLocation
                 textFormat: Text.PlainText
-                font.family: MoneroComponents.Style.fontRegular.name
+                font.family: MidasComponents.Style.fontRegular.name
                 font.pixelSize: 14
                 color: "#FF0000"
                 themeTransition: false

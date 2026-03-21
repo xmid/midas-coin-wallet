@@ -30,7 +30,7 @@ import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.1
 
-import "." as MoneroComponents
+import "." as MidasComponents
 
 Popup {
     id: dialog
@@ -39,9 +39,9 @@ Popup {
     property alias title: header.text
 
     background: Rectangle {
-        border.color: MoneroComponents.Style.blackTheme ? Qt.rgba(255, 255, 255, 0.25) : Qt.rgba(0, 0, 0, 0.25)
+        border.color: MidasComponents.Style.blackTheme ? Qt.rgba(255, 255, 255, 0.25) : Qt.rgba(0, 0, 0, 0.25)
         border.width: 1
-        color: MoneroComponents.Style.blackTheme ? "black" : "white"
+        color: MidasComponents.Style.blackTheme ? "black" : "white"
         radius: 10
     }
     closePolicy: Popup.CloseOnEscape
@@ -56,9 +56,9 @@ Popup {
 
         Text {
             id: header
-            color: MoneroComponents.Style.defaultFontColor
+            color: MidasComponents.Style.defaultFontColor
             font.bold: true
-            font.family: MoneroComponents.Style.fontRegular.name
+            font.family: MidasComponents.Style.fontRegular.name
             font.pixelSize: 18
             visible: text != ""
         }

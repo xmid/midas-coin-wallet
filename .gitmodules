@@ -1,6 +1,6 @@
-[submodule "monero"]
-	path = monero
-	url = https://github.com/monero-project/monero
+[submodule "midas"]
+	path = midas
+	url = https://github.com/xmid/midas-coin.git
 	ignore = all
 [submodule "external/quirc"]
 	path = external/quirc
