@@ -1,3 +1,5 @@
+> **Binary recommendation:** We strongly recommend building binaries from source. Windows and services like VirusTotal often flag Monero and Monero forks as miners (false positives). Prefer building your own binaries; if you cannot build successfully, use the prebuilt artifacts from this repository’s **Releases** section.
+
 > Notice: This repository is a complete fork of the upstream Monero GUI (`monero-project/monero-gui`). It retains the original structure, build system, and license, with Midas-specific branding, configuration, and feature adjustments where applicable.
 
 # Midas GUI
